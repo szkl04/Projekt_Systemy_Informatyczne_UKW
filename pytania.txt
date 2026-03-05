@@ -1,0 +1,17 @@
+? Czy ankietowany pisze tekst samemu czy odpowiada na przygotowane pytania
+
+? Czy ankiety maja byc anonimowe
+
+? Jak weryfikowac przynaleznosc do uczelni
+
+? Czy maja byc nt. określonej osoby
+
+? Czy oceniamy liczbowo, czy słownie
+
+? Czy dostepne z poziomu witryny ukw
+
+? Gdzie maja byc fizycznie przetrzymywane informacje
+
+? Czy system powinien powiadamiac osoby ktore jeszcze nie wypelnily ankiety
+
+? Czy wyniki ankiety mają byc publiczne, czy dostepne tylko dla administracji uniwersytetu
