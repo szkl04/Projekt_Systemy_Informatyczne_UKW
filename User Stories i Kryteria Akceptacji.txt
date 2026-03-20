@@ -1,0 +1,96 @@
+1.Jako gracz chcę móc zarejestrować konto, aby zapisywać swoje postępy w grze.
+Kryteria akceptacji:
+Gracz może utworzyć konto podając email i hasło.
+Po rejestracji gracz może się zalogować poprawnymi danymi.
+ 
+2.Jako gracz chcę móc modyfikować swój profil, aby wyróżniać się w grze.
+Kryteria akceptacji:
+Możliwość dodania awatara i zmiany nicku.
+ 
+3.Jako gracz chcę tworzyć własne pokoje gry lub dołączać do istniejących, aby grać z innymi.
+Kryteria akceptacji:
+Gracz może stworzyć pokój z własnymi ustawieniami.
+Gracz może przeglądać listę dostępnych pokoi i dołączyć do jednego z nich.
+ 
+4.Jako gracz chcę wybierać broń i ekwipunek, aby dopasować swój styl gry.
+Kryteria akceptacji:
+Możliwość wyboru broni i ekwipunku przed rozpoczęciem meczu.
+Wybrana broń pojawia się w ekwipunku gracza w grze.
+ 
+5.Jako gracz chcę zdobywać punkty, aby śledzić swoje postępy.
+Kryteria akceptacji:
+Po zakończeniu meczu punkty są przyznawane automatycznie.
+Ranking jest aktualizowany po każdym meczu.
+ 
+6.Jako gracz chcę komunikować się z innymi graczami przez czat, aby planować rozgrywkę.
+Kryteria akceptacji:
+Gracz może wysyłać wiadomości w lobby i w trakcie meczu.
+ 
+7.Jako gracz chcę zmieniać ustawienia sterowania, grafiki, i dźwięku, aby dostosować grę do siebie.
+Kryteria akceptacji:
+Gracz może zmienić ustawienia i zapisać je na swoim koncie.
+ 
+8.Jako gracz chcę kupować skiny i ulepszenia za walutę gry, aby personalizować swoją postać.
+Kryteria akceptacji:
+Waluta i przedmioty są dodawane do konta po zakupie.
+ 
+9.Jako gracz chcę widzieć swoje statystyki, aby śledzić postępy.
+Kryteria akceptacji:
+Gracz może przeglądać historię wyników.
+ 
+10.Jako gracz chcę zgłaszać niewłaściwe zachowania, aby utrzymać grę sprawiedliwą.
+Kryteria akceptacji:
+System pozwala zgłosić gracza z wybranego powodu.
+Zgłoszenia trafiają do moderatora.
+ 
+11.Jako moderator chcę widzieć zgłoszenia graczy i czat, aby pilnować zasad gry.
+Kryteria akceptacji:
+Moderator widzi wszystkie zgłoszenia w panelu.
+Moderator może przeglądać historię czatu.
+ 
+12.Jako moderator chcę zatwierdzać lub odrzucać zgłoszenia graczy, aby reagować na problemy.
+Kryteria akceptacji:
+Każde zgłoszenie można oznaczyć jako rozpatrzone lub odrzucone.
+ 
+13.Jako moderator chcę móc zamykać lub resetować pokoje, aby kontrolować rozgrywkę.
+Kryteria akceptacji:
+Moderator może zakończyć mecz lub usunąć pokój z listy dostępnych.
+
+14.Jako moderator chcę nakładać blokady czasowe lub stałe na graczy, aby karać za łamanie regulaminu.
+Kryteria akceptacji:
+Możliwość zablokowania konta na wybrany okres (np. 24h, 7 dni) lub na stałe.
+Gracz widzi powód bana przy próbie logowania.
+
+15.Jako moderator chcę wyciszać graczy na czacie, aby powstrzymać agresywne zachowania.
+Kryteria akceptacji:
+Możliwość nałożenia blokady pisania na wybrany czas.
+Zablokowany gracz nie może wysyłać wiadomości w lobby ani w trakcie meczu.
+
+16.Jako product manager chcę zarządzać ofertą sklepu, aby wprowadzać nowe przedmioty.
+Kryteria akceptacji:
+Możliwość dodawania nowych skinów i ustalania ich cen w panelu.
+Możliwość ustawiania czasowych promocji na wybrane przedmioty.
+
+17.Jako product manager chcę widzieć raporty sprzedaży, aby analizować przychody z gry.
+Kryteria akceptacji:
+System generuje zestawienie sprzedanych przedmiotów i zarobionej waluty.
+Możliwość filtrowania raportów według daty.
+
+18.Jako product manager chcę śledzić liczbę aktywnych graczy, aby oceniać popularność gry.
+Kryteria akceptacji:
+Panel wyświetla liczbę graczy online oraz statystyki dzienne.
+
+19.Jako product manager chcę konfigurować system nagród, aby zachęcać do codziennego grania.
+Kryteria akceptacji:
+Możliwość ustalenia bonusów za pierwsze logowanie w danym dniu.
+Nagroda jest automatycznie przypisywana do konta gracza.
+
+20.Jako product manager chcę tworzyć wydarzenia specjalne, aby urozmaicać rozgrywkę.
+Kryteria akceptacji:
+Możliwość czasowego odblokowania specjalnych map lub trybów gry.
+Wydarzenie pojawia się w menu głównym dla wszystkich graczy.
+
+21.Jako product manager chcę przeprowadzać ankiety w grze, aby zbierać opinie od użytkowników.
+Kryteria akceptacji:
+Możliwość wyświetlenia krótkiego pytania graczowi po zakończeniu meczu.
+Wyniki ankiet są zbierane i widoczne w panelu zarządzania.
