@@ -1,96 +1,188 @@
-1.Jako gracz chcę móc zarejestrować konto, aby zapisywać swoje postępy w grze.
+US-01: Rejestracja konta
+Jako gracz chcę móc zarejestrować konto, aby zapisywać swoje postępy w grze.
 Kryteria akceptacji:
-Gracz może utworzyć konto podając email i hasło.
-Po rejestracji gracz może się zalogować poprawnymi danymi.
- 
-2.Jako gracz chcę móc modyfikować swój profil, aby wyróżniać się w grze.
+- Gra przed rozpoczęciem rozgrywki wyświetla formularz rejestracji/logowania.
+- System weryfikuje poprawność danych w określonym formacie (adres e-mail, minimalna długość hasła).
+- Rejestracja przechodzi pomyślnie w przypadku poprawności danych.
+- Po rejestracji gracz może się zalogować poprawnymi danymi.
+- Nie jest możliwa rejestracja dwóch kont przy użyciu tego samego adresu e-mail.
+US-02: Modyfikacja profilu
+Jako gracz chcę móc modyfikować swój profil, aby wyróżniać się w grze.
 Kryteria akceptacji:
-Możliwość dodania awatara i zmiany nicku.
- 
-3.Jako gracz chcę tworzyć własne pokoje gry lub dołączać do istniejących, aby grać z innymi.
+- Każde konto posiada awatar oraz nazwę konta.
+- System udostępnia kilka predefiniowanych awatarów do wyboru.
+- System oferuje możliwość zmiany nazwy konta raz na miesiąc.
+US-03: Tworzenie i dołączanie do pokoi gry
+Jako gracz chcę tworzyć własne pokoje gry lub dołączać do istniejących, aby grać z innymi.
 Kryteria akceptacji:
-Gracz może stworzyć pokój z własnymi ustawieniami.
-Gracz może przeglądać listę dostępnych pokoi i dołączyć do jednego z nich.
- 
-4.Jako gracz chcę wybierać broń i ekwipunek, aby dopasować swój styl gry.
+- Gracz może stworzyć własny dedykowany lub tymczasowy pokój gry.
+- System automatycznie generuje unikalny kod zaproszenia do pokoju.
+- Gracz może przeglądać listę dostępnych pokoi z poziomu menu gry.
+- Gracz może dołączyć do pokoju innego gracza z poziomu menu gry lub poprzez podanie kodu zaproszenia.
+US-04: Wybór klasy postaci
+Jako gracz chcę wybierać klasę postaci, aby dopasować swój styl gry.
 Kryteria akceptacji:
-Możliwość wyboru broni i ekwipunku przed rozpoczęciem meczu.
-Wybrana broń pojawia się w ekwipunku gracza w grze.
- 
-5.Jako gracz chcę zdobywać punkty, aby śledzić swoje postępy.
+- Gra oferuje kilka predefiniowanych klas postaci, różniących się wyglądem i statystykami.
+- Przed rozpoczęciem meczu gra wyświetla menu wyboru klasy.
+- Wybór klasy możliwy jest przed rozpoczęciem meczu oraz w jego trakcie.
+- Zmiana klasy w trakcie meczu aktualizuje się dopiero po śmierci postaci gracza.
+US-05: Zdobywanie punktów i ranking
+Jako gracz chcę zdobywać punkty, aby śledzić swoje postępy na tle innych graczy.
 Kryteria akceptacji:
-Po zakończeniu meczu punkty są przyznawane automatycznie.
-Ranking jest aktualizowany po każdym meczu.
- 
-6.Jako gracz chcę komunikować się z innymi graczami przez czat, aby planować rozgrywkę.
+- System przyznaje liczbę punktów za wygraną oraz odbiera punkty za przegraną według określonego algorytmu uwzględniającego wynik meczu.
+- Punkty widoczne są z poziomu profilu gracza.
+- Globalny ranking punktów widoczny jest z poziomu głównego menu gry.
+- Ranking jest aktualizowany po każdym meczu.
+US-06: Czat tekstowy
+Jako gracz chcę komunikować się z innymi graczami przez czat, aby planować rozgrywkę.
 Kryteria akceptacji:
-Gracz może wysyłać wiadomości w lobby i w trakcie meczu.
- 
-7.Jako gracz chcę zmieniać ustawienia sterowania, grafiki, i dźwięku, aby dostosować grę do siebie.
+- System udostępnia czat tekstowy dostępny dla graczy znajdujących się w tym samym meczu.
+- Czat tekstowy wywoływany jest określonym skrótem klawiszowym.
+- Wiadomości na czacie widoczne są wyłącznie dla zawodników z drużyny gracza wysyłającego wiadomość.
+- System umożliwia wysyłanie wiadomości prywatnych między graczami.
+- System umożliwia usuwanie wiadomości prywatnych.
+US-07: Personalizacja klawiszy
+Jako gracz chcę zmieniać przypisanie klawiszy, aby dostosować sterowanie do swoich preferencji.
 Kryteria akceptacji:
-Gracz może zmienić ustawienia i zapisać je na swoim koncie.
- 
-8.Jako gracz chcę kupować skiny i ulepszenia za walutę gry, aby personalizować swoją postać.
+- Menu gry zawiera zakładkę „Klawiatura", która wyświetla listę dostępnych akcji oraz przypisanych do nich klawiszy.
+- Gracz może z poziomu zakładki zmienić przypisany klawisz dla dowolnej akcji.
+- Każda zmiana jest zapisywana i przypisywana do konta gracza.
+US-08: Ustawienia dźwięku
+Jako gracz chcę zmieniać ustawienia dźwięku, aby dostosować grę do swoich preferencji.
 Kryteria akceptacji:
-Waluta i przedmioty są dodawane do konta po zakupie.
- 
-9.Jako gracz chcę widzieć swoje statystyki, aby śledzić postępy.
+- Menu gry zawiera zakładkę „Dźwięk", która wyświetla suwaki umożliwiające regulację ustawień dźwięku.
+- Gracz może zmienić głośność całej gry lub samej muzyki poprzez przesunięcie odpowiedniego suwaka.
+- Każda zmiana jest zapisywana i przypisywana do konta gracza.
+US-09: Sklep i zakup skórek
+Jako gracz chcę kupować skórki za walutę gry, aby personalizować wygląd swojej postaci.
 Kryteria akceptacji:
-Gracz może przeglądać historię wyników.
- 
-10.Jako gracz chcę zgłaszać niewłaściwe zachowania, aby utrzymać grę sprawiedliwą.
+- Gra zawiera wewnętrzny sklep umożliwiający zakup skórek.
+- Sklep wyświetla aktualny stan konta gracza.
+- Sklep udostępnia formularz doładowania wirtualnej waluty z możliwością wyboru kilku metod płatności.
+- Po sfinalizowaniu płatności określona ilość waluty przypisywana jest do konta gracza.
+- Zakup skórki odejmuje jej koszt z salda gracza.
+- Próba zakupu skórki przy niewystarczającym saldzie skutkuje wyświetleniem komunikatu informującego o brakującej kwocie oraz przekierowaniem do formularza doładowania waluty.
+- Po zakupie skórka przypisywana jest permanentnie do konta gracza.
+- Dostępne skórki widoczne są z poziomu menu wyboru klasy przed meczem i w jego trakcie.
+- Skórki zmieniają wygląd wybranej klasy postaci.
+US-10: Historia rozgrywek i statystyki
+Jako gracz chcę widzieć swoje statystyki, aby śledzić postępy.
 Kryteria akceptacji:
-System pozwala zgłosić gracza z wybranego powodu.
-Zgłoszenia trafiają do moderatora.
- 
-11.Jako moderator chcę widzieć zgłoszenia graczy i czat, aby pilnować zasad gry.
+- System zapisuje historię rozgrywek gracza.
+- Historia rozgrywek widoczna jest z poziomu profilu gracza.
+- Historia rozgrywek jest domyślnie publiczna.
+- Gracz może ustawić swoją historię rozgrywek jako prywatną poprzez odpowiednią opcję w zakładce historii.
+- Historia rozgrywek jest aktualizowana po każdym meczu.
+- System automatycznie oblicza i wyświetla procentowy udział wygranych gier w zakładce historii rozgrywek.
+US-11: Zgłaszanie niewłaściwych zachowań
+Jako gracz chcę zgłaszać niewłaściwe zachowania, aby utrzymać grę sprawiedliwą.
 Kryteria akceptacji:
-Moderator widzi wszystkie zgłoszenia w panelu.
-Moderator może przeglądać historię czatu.
- 
-12.Jako moderator chcę zatwierdzać lub odrzucać zgłoszenia graczy, aby reagować na problemy.
+- Gra udostępnia formularz zgłoszeń zawierający pola nazwy konta oraz opisu powodu zgłoszenia.
+- System umożliwia zgłaszanie wiadomości bezpośrednio z poziomu czatu tekstowego.
+- Najechanie na wiadomość tekstową wyświetla przycisk „Zgłoś".
+- Kliknięcie przycisku automatycznie wypełnia formularz treścią wiadomości i nazwą jej autora.
+- Wypełnione zgłoszenie przesyłane jest do moderatora gry.
+US-12: Panel moderatora
+Jako moderator chcę mieć dostęp do dedykowanego panelu zarządzania, aby skutecznie nadzorować przebieg rozgrywek i zachowanie graczy.
 Kryteria akceptacji:
-Każde zgłoszenie można oznaczyć jako rozpatrzone lub odrzucone.
- 
-13.Jako moderator chcę móc zamykać lub resetować pokoje, aby kontrolować rozgrywkę.
+- System udostępnia panel moderatora niedostępny dla zwykłych graczy.
+- Panel wyświetla listę aktualnych zgłoszeń graczy.
+- Panel wyświetla listę aktywnych pokoi gry z dodatkowymi opcjami zarządzania.
+- Moderator ma wgląd w czat tekstowy wszystkich aktywnych pokoi.
+US-13: Rozpatrywanie zgłoszeń
+Jako moderator chcę przeglądać i rozpatrywać zgłoszenia graczy, aby reagować na problemy w grze.
 Kryteria akceptacji:
-Moderator może zakończyć mecz lub usunąć pokój z listy dostępnych.
-
-14.Jako moderator chcę nakładać blokady czasowe lub stałe na graczy, aby karać za łamanie regulaminu.
+- Moderator może przeglądać listę zgłoszeń i wybierać konkretne do oceny.
+- Kliknięcie zgłoszenia wyświetla jego treść oraz nazwę zgłoszonego gracza.
+- Panel udostępnia przyciski umożliwiające zastosowanie dostępnych kar.
+- Moderator ma możliwość odrzucenia zgłoszenia bez nakładania kary.
+US-14: Nakładanie blokad na graczy
+Jako moderator chcę mieć możliwość nakładania blokad na konta użytkowników, aby egzekwować przestrzeganie regulaminu.
 Kryteria akceptacji:
-Możliwość zablokowania konta na wybrany okres (np. 24h, 7 dni) lub na stałe.
-Gracz widzi powód bana przy próbie logowania.
-
-15.Jako moderator chcę wyciszać graczy na czacie, aby powstrzymać agresywne zachowania.
+- Moderator posiada dostęp do panelu zarządzania kontem użytkownika z opcją „Nałóż blokadę".
+- Moderator wybiera typ blokady: czasową (24h, 7 dni, 30 dni) lub stałą, oraz wpisuje jej powód.
+- Po zatwierdzeniu status konta gracza zmienia się na „Zablokowany".
+- System zapisuje datę wygaśnięcia blokady oraz identyfikator moderatora nakładającego karę.
+- Jeśli gracz jest aktualnie zalogowany, zostaje natychmiast wylogowany z systemu.
+US-15: Informowanie gracza o aktywnej blokadzie
+Jako zablokowany gracz chcę wiedzieć, dlaczego nie mogę się zalogować i jak długo potrwa moja kara, aby mieć jasność co do swojego statusu w systemie.
 Kryteria akceptacji:
-Możliwość nałożenia blokady pisania na wybrany czas.
-Zablokowany gracz nie może wysyłać wiadomości w lobby ani w trakcie meczu.
-
-16.Jako product manager chcę zarządzać ofertą sklepu, aby wprowadzać nowe przedmioty.
+- Podczas próby logowania na zablokowane konto system uniemożliwia dostęp i wyświetla dedykowany komunikat.
+- Komunikat zawiera powód blokady wpisany przez moderatora.
+- W przypadku blokady czasowej komunikat zawiera datę i godzinę jej wygaśnięcia; w przypadku blokady stałej — informację o permanentnym wykluczeniu.
+- System automatycznie przywraca możliwość logowania po upływie czasu blokady czasowej.
+- Komunikat jest wizualnie odróżniony od standardowego błędu „błędne hasło".
+US-16: Wyciszanie gracza na czacie
+Jako moderator chcę móc nakładać czasowe ograniczenia na wysyłanie wiadomości przez graczy, aby reagować na agresywne zachowania bez konieczności usuwania gracza z rozgrywki.
 Kryteria akceptacji:
-Możliwość dodawania nowych skinów i ustalania ich cen w panelu.
-Możliwość ustawiania czasowych promocji na wybrane przedmioty.
-
-17.Jako product manager chcę widzieć raporty sprzedaży, aby analizować przychody z gry.
+- Moderator posiada opcję „Wycisz gracza" dostępną z poziomu listy graczy w lobby oraz w trakcie meczu.
+- Podczas nakładania kary moderator wybiera czas trwania wyciszenia (np. 5 min, 15 min, do końca meczu).
+- Wyciszony gracz traci możliwość wysyłania wiadomości na czacie ogólnym, drużynowym i w lobby.
+- Wyciszony gracz otrzymuje komunikat systemowy z informacją o czasie trwania i powodem wyciszenia.
+- Inni gracze nie widzą prób wysyłania wiadomości przez wyciszoną osobę.
+- Po upływie czasu wyciszenia uprawnienia do pisania są automatycznie przywracane, a gracz otrzymuje stosowny komunikat.
+US-17: Zamykanie pokoju gry
+Jako moderator chcę móc trwale zamknąć pokój rozgrywki, aby zakończyć sesję i usunąć ją z listy dostępnych pokoi.
 Kryteria akceptacji:
-System generuje zestawienie sprzedanych przedmiotów i zarobionej waluty.
-Możliwość filtrowania raportów według daty.
-
-18.Jako product manager chcę śledzić liczbę aktywnych graczy, aby oceniać popularność gry.
+- Moderator widzi przycisk „Zamknij pokój" w panelu zarządzania aktywnym pokojem.
+- Po kliknięciu system wyświetla okno potwierdzenia akcji.
+- Po potwierdzeniu wszyscy gracze otrzymują komunikat o zamknięciu pokoju przez moderatora i zostają przekierowani do menu głównego.
+- Pokój zostaje usunięty z publicznej listy dostępnych pokoi.
+- Dane o zakończonej rozgrywce zostają zapisane w historii graczy przed usunięciem pokoju.
+US-18: Resetowanie rozgrywki w pokoju
+Jako moderator chcę móc zresetować bieżący stan pokoju, aby rozpocząć nową rundę z tymi samymi graczami bez konieczności tworzenia nowego pokoju.
 Kryteria akceptacji:
-Panel wyświetla liczbę graczy online oraz statystyki dzienne.
-
-19.Jako product manager chcę konfigurować system nagród, aby zachęcać do codziennego grania.
+- Moderator posiada opcję „Resetuj rundę" dostępną w trakcie lub po zakończeniu meczu.
+- Opcja widoczna jest wyłącznie dla użytkownika z rolą moderatora danego pokoju.
+- Po resecie wszystkie wyniki bieżącej sesji zostają wyzerowane, a stan gry wraca do etapu lobby przygotowawczego.
+- Gracze pozostają w pokoju i otrzymują komunikat: „Moderator zresetował rozgrywkę".
+US-19: Wymuszanie zakończenia meczu
+Jako moderator chcę móc natychmiast zakończyć trwający mecz, aby rozliczyć wyniki w sytuacjach spornych lub technicznych.
 Kryteria akceptacji:
-Możliwość ustalenia bonusów za pierwsze logowanie w danym dniu.
-Nagroda jest automatycznie przypisywana do konta gracza.
-
-20.Jako product manager chcę tworzyć wydarzenia specjalne, aby urozmaicać rozgrywkę.
+- Moderator może zakończyć mecz przed spełnieniem naturalnych warunków wygranej.
+- System wymaga potwierdzenia akcji przed jej wykonaniem.
+- Po wymuszonym zakończeniu system nalicza statystyki i punkty zdobyte do momentu przerwania.
+- Pokój przechodzi w stan „Zakończony", umożliwiając graczom przejrzenie wyników — gracze nie są przekierowywani do menu głównego.
+- Pokój przestaje być widoczny na liście aktywnych rozgrywek dla graczy spoza pokoju.
+US-20: Raporty finansowe sklepu
+Jako Product Manager chcę mieć dostęp do modułu raportowania sprzedaży, aby monitorować przychody i popularność przedmiotów w celu optymalizacji strategii biznesowej.
 Kryteria akceptacji:
-Możliwość czasowego odblokowania specjalnych map lub trybów gry.
-Wydarzenie pojawia się w menu głównym dla wszystkich graczy.
-
-21.Jako product manager chcę przeprowadzać ankiety w grze, aby zbierać opinie od użytkowników.
+- Panel administracyjny zawiera sekcję „Raporty sprzedaży".
+- System wyświetla zestawienie zawierające całkowitą sumę przychodów, listę sprzedanych przedmiotów z liczbą zakupionych sztuk oraz średnią wartość transakcji.
+- System udostępnia filtr dat umożliwiający wybór zakresu (np. od-do, ostatnie 7 dni, bieżący miesiąc).
+- Po zastosowaniu filtra dane w raporcie są automatycznie przeliczane i aktualizowane.
+- Zestawienie prezentowane jest w formie tabeli z możliwością sortowania według nazwy przedmiotu lub wygenerowanego przychodu.
+- Raport rozróżnia przychód z cen bazowych od przychodu z przedmiotów sprzedanych w ramach promocji.
+US-21: Statystyki aktywności graczy
+Jako Product Manager chcę mieć wgląd w dane dotyczące aktywności graczy w czasie rzeczywistym oraz historycznie, aby analizować trendy popularności i efektywność wprowadzanych aktualizacji.
 Kryteria akceptacji:
-Możliwość wyświetlenia krótkiego pytania graczowi po zakończeniu meczu.
-Wyniki ankiet są zbierane i widoczne w panelu zarządzania.
+- Panel administracyjny wyświetla licznik aktywnych graczy odświeżany w czasie rzeczywistym.
+- System prezentuje dzienny wskaźnik DAU (liczba unikalnych użytkowników w ciągu doby).
+- Panel zawiera wykres liniowy obrazujący zmiany liczby graczy w ciągu ostatnich 24 godzin, z możliwością odczytu dokładnej wartości po najechaniu kursorem.
+- Product Manager może sprawdzić szczytową liczbę graczy online dla wybranego dnia.
+- Statystyki dzienne są archiwizowane, umożliwiając porównanie aktywności z poprzednimi dniami lub tygodniami.
+US-22: Codzienna nagroda za logowanie
+Jako Product Manager chcę zarządzać systemem bonusów za codzienne logowanie, aby zwiększać retencję graczy.
+Kryteria akceptacji:
+- Panel administracyjny zawiera sekcję „Konfiguracja nagród dziennych".
+- System umożliwia zdefiniowanie rodzaju i ilości nagrody (np. waluta gry, przedmioty kosmetyczne) za pierwsze logowanie w danym dniu.
+- System automatycznie wykrywa pierwsze logowanie użytkownika w ciągu doby i przypisuje zdefiniowaną nagrodę do jego konta.
+- Gracz po zalogowaniu otrzymuje powiadomienie z informacją o odebranej nagrodzie.
+- System uniemożliwia ponowne odebranie nagrody tego samego dnia przez tego samego użytkownika.
+- Product Manager może w dowolnym momencie zmienić wartość lub typ nagrody; zmiany wchodzą w życie od najbliższego cyklu dobowego.
+US-23: Ankiety po meczu
+Jako Product Manager chcę mieć możliwość publikowania krótkich pytań dla graczy po zakończeniu meczu, aby zbierać dane o ich odczuciach i preferencjach bez konieczności opuszczania aplikacji.
+Kryteria akceptacji:
+- Product Manager może w panelu administracyjnym zdefiniować treść pytania oraz zestaw opcji odpowiedzi (np. skala 1–5 lub wybór jednokrotny).
+- System wyświetla ankietę graczowi w oknie podsumowania natychmiast po zakończeniu meczu, przed powrotem do menu głównego.
+- Gracz ma możliwość pominięcia ankiety przyciskiem „Pomiń".
+- System rejestruje każdą udzieloną odpowiedź i przypisuje ją do identyfikatora danej ankiety w bazie danych.
+- Product Manager widzi w panelu zestawienie wyników ankiety z podziałem na poszczególne opcje odpowiedzi.
+US-24: Zarządzanie rolami użytkowników
+Jako administrator chcę mieć możliwość nadawania i odbierania ról użytkownikom, aby kontrolować poziom uprawnień w systemie.
+Kryteria akceptacji:
+- System wyróżnia cztery role: gracz, moderator, Product Manager oraz administrator.
+- Administrator może z poziomu panelu administracyjnego wyszukać konto użytkownika po nazwie lub adresie e-mail.
+- Administrator może nadać lub odebrać wybranemu użytkownikowi rolę moderatora lub Product Managera.
+- Zmiana roli wchodzi w życie natychmiast — użytkownik otrzymuje lub traci odpowiednie uprawnienia bez konieczności ponownego logowania.
+- System zapisuje historię zmian ról wraz z identyfikatorem administratora dokonującego zmiany.
