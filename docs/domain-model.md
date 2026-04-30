@@ -4,33 +4,37 @@
 
 ## Encje
 
-- gracz
-- konto gracza
-- ranking
-- sklep
-- produkt
-- ekwipunek
-- mecz
-- historia meczy
-- tryb gry
-- mapa gry
+- konto
+- rola
+- blokada
+- pokój gry
 - chat
 - wiadomość
+- sklep
+- produkt
+- transakcja
+- ekwipunek
+- zgłoszenie
+- ankieta
 
 ---
 
 ## Relacje
 
-- gracz posiada konto
-- konto zawiera ranking
-- sklep zawiera produkty
-- produkty dodawanie są do ekwipunku
-- ekwipunek przypisany jest do konta gracza
-- konto zawiera historię meczy
-- mecz rozgrywa się na mapie
-- mecz rozgrywa się w określonym trybie gry
-- w trakcie meczu można korzystać z chatu
-- chat zawiera wiadomości graczy
+- konto posiada rolę
+- konto posiada ekwipunek
+- konto wykonuje transakcję
+- konto wysyła wiadomość
+- konto jest autorem wiadomości
+- konto składa zgłoszenie
+- konto uczestniczy w pokoju gry
+- konto posiada blokadę
+- pokój gry posiada chat
+- chat zawiera wiadomości
+- wiadomość może być przedmiotem zgłoszenia
+- sklep oferuje produkty
+- transakcja dotyczy produktu
+- ekwipunek zawiera produkty
 
 ---
 
