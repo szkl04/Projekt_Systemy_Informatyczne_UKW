@@ -6,33 +6,44 @@ Kryteria akceptacji:
 - Rejestracja przechodzi pomyślnie w przypadku poprawności danych.
 - Po rejestracji gracz może się zalogować poprawnymi danymi.
 - Nie jest możliwa rejestracja dwóch kont przy użyciu tego samego adresu e-mail.
+
+
 US-02: Modyfikacja profilu
 Jako gracz chcę móc modyfikować swój profil, aby wyróżniać się w grze.
 Kryteria akceptacji:
 - Każde konto posiada awatar oraz nazwę konta.
 - System udostępnia kilka predefiniowanych awatarów do wyboru.
 - System oferuje możliwość zmiany nazwy konta raz na miesiąc.
+
+
 US-03: Tworzenie i dołączanie do pokoi gry
 Jako gracz chcę tworzyć własne pokoje gry lub dołączać do istniejących, aby grać z innymi.
 Kryteria akceptacji:
-- Gracz może stworzyć własny dedykowany lub tymczasowy pokój gry.
+- Gracz może stworzyć własny dedykowany lub tymczasowy pokój gry — klient przesyła żądanie utworzenia pokoju do serwera gry.
 - System automatycznie generuje unikalny kod zaproszenia do pokoju.
 - Gracz może przeglądać listę dostępnych pokoi z poziomu menu gry.
 - Gracz może dołączyć do pokoju innego gracza z poziomu menu gry lub poprzez podanie kodu zaproszenia.
+
+
 US-04: Wybór klasy postaci
-Jako gracz chcę wybierać klasę postaci, aby dopasować swój styl gry.
+Jako gracz chcę wybierać klasę postaci w kliencie gry, aby mój wybór był przesłany do serwera i wpłynął na przebieg meczu.
 Kryteria akceptacji:
-- Gra oferuje kilka predefiniowanych klas postaci, różniących się wyglądem i statystykami.
-- Przed rozpoczęciem meczu gra wyświetla menu wyboru klasy.
+- Klient gry pobiera z serwera listę dostępnych klas postaci wraz z ich nazwami i ikonami.
+- Przed rozpoczęciem meczu klient wyświetla menu wyboru klasy na podstawie pobranych danych.
 - Wybór klasy możliwy jest przed rozpoczęciem meczu oraz w jego trakcie.
-- Zmiana klasy w trakcie meczu aktualizuje się dopiero po śmierci postaci gracza.
-US-05: Zdobywanie punktów i ranking
-Jako gracz chcę zdobywać punkty, aby śledzić swoje postępy na tle innych graczy.
+- Klient przesyła wybrany identyfikator klasy do serwera gry; zmiana w trakcie meczu jest aplikowana przez serwer dopiero po śmierci postaci gracza.
+- Klient wyświetla aktualnie aktywną klasę gracza zgodnie ze stanem zwracanym przez serwer.
+
+
+US-05: Wyświetlanie punktów i rankingu
+Jako gracz chcę widzieć swoje punkty i pozycję w rankingu w kliencie gry, aby śledzić swoje postępy na tle innych graczy.
 Kryteria akceptacji:
-- System przyznaje liczbę punktów za wygraną oraz odbiera punkty za przegraną według określonego algorytmu uwzględniającego wynik meczu.
-- Punkty widoczne są z poziomu profilu gracza.
-- Globalny ranking punktów widoczny jest z poziomu głównego menu gry.
-- Ranking jest aktualizowany po każdym meczu.
+- Klient gry pobiera z serwera aktualny wynik punktowy gracza i wyświetla go z poziomu profilu.
+- Klient pobiera i wyświetla globalny ranking punktów z poziomu głównego menu.
+- Po zakończeniu meczu klient automatycznie odświeża dane rankingowe, pobierając zaktualizowany stan z serwera.
+- Klient prezentuje zmianę punktów po meczu (zysk lub strata) w ekranie podsumowania.
+
+
 US-06: Czat tekstowy
 Jako gracz chcę komunikować się z innymi graczami przez czat, aby planować rozgrywkę.
 Kryteria akceptacji:
@@ -41,18 +52,24 @@ Kryteria akceptacji:
 - Wiadomości na czacie widoczne są wyłącznie dla zawodników z drużyny gracza wysyłającego wiadomość.
 - System umożliwia wysyłanie wiadomości prywatnych między graczami.
 - System umożliwia usuwanie wiadomości prywatnych.
+
+
 US-07: Personalizacja klawiszy
-Jako gracz chcę zmieniać przypisanie klawiszy, aby dostosować sterowanie do swoich preferencji.
+Jako gracz chcę zmieniać przypisanie klawiszy w kliencie gry, aby dostosować sterowanie do swoich preferencji.
 Kryteria akceptacji:
 - Menu gry zawiera zakładkę „Klawiatura", która wyświetla listę dostępnych akcji oraz przypisanych do nich klawiszy.
 - Gracz może z poziomu zakładki zmienić przypisany klawisz dla dowolnej akcji.
-- Każda zmiana jest zapisywana i przypisywana do konta gracza.
+- Każda zmiana jest zapisywana lokalnie oraz synchronizowana z kontem gracza na serwerze, dzięki czemu ustawienia są dostępne po zalogowaniu na innym urządzeniu.
+
+
 US-08: Ustawienia dźwięku
-Jako gracz chcę zmieniać ustawienia dźwięku, aby dostosować grę do swoich preferencji.
+Jako gracz chcę zmieniać ustawienia dźwięku w kliencie gry, aby dostosować go do swoich preferencji.
 Kryteria akceptacji:
 - Menu gry zawiera zakładkę „Dźwięk", która wyświetla suwaki umożliwiające regulację ustawień dźwięku.
 - Gracz może zmienić głośność całej gry lub samej muzyki poprzez przesunięcie odpowiedniego suwaka.
-- Każda zmiana jest zapisywana i przypisywana do konta gracza.
+- Każda zmiana jest zapisywana lokalnie oraz synchronizowana z kontem gracza na serwerze.
+
+
 US-09: Sklep i zakup skórek
 Jako gracz chcę kupować skórki za walutę gry, aby personalizować wygląd swojej postaci.
 Kryteria akceptacji:
@@ -65,15 +82,17 @@ Kryteria akceptacji:
 - Po zakupie skórka przypisywana jest permanentnie do konta gracza.
 - Dostępne skórki widoczne są z poziomu menu wyboru klasy przed meczem i w jego trakcie.
 - Skórki zmieniają wygląd wybranej klasy postaci.
+
+
 US-10: Historia rozgrywek i statystyki
-Jako gracz chcę widzieć swoje statystyki, aby śledzić postępy.
+Jako gracz chcę widzieć historię swoich rozgrywek i statystyki w kliencie gry, aby śledzić postępy.
 Kryteria akceptacji:
-- System zapisuje historię rozgrywek gracza.
-- Historia rozgrywek widoczna jest z poziomu profilu gracza.
-- Historia rozgrywek jest domyślnie publiczna.
-- Gracz może ustawić swoją historię rozgrywek jako prywatną poprzez odpowiednią opcję w zakładce historii.
-- Historia rozgrywek jest aktualizowana po każdym meczu.
-- System automatycznie oblicza i wyświetla procentowy udział wygranych gier w zakładce historii rozgrywek.
+- Klient gry pobiera z serwera historię rozgrywek gracza i wyświetla ją z poziomu profilu.
+- Historia rozgrywek jest domyślnie publiczna; gracz może ustawić ją jako prywatną poprzez odpowiednią opcję w zakładce historii — ustawienie jest zapisywane na serwerze.
+- Po zakończeniu meczu klient automatycznie odświeża historię rozgrywek.
+- Klient pobiera z serwera i wyświetla procentowy udział wygranych gier w zakładce historii rozgrywek.
+
+
 US-11: Zgłaszanie niewłaściwych zachowań
 Jako gracz chcę zgłaszać niewłaściwe zachowania, aby utrzymać grę sprawiedliwą.
 Kryteria akceptacji:
@@ -82,6 +101,8 @@ Kryteria akceptacji:
 - Najechanie na wiadomość tekstową wyświetla przycisk „Zgłoś".
 - Kliknięcie przycisku automatycznie wypełnia formularz treścią wiadomości i nazwą jej autora.
 - Wypełnione zgłoszenie przesyłane jest do moderatora gry.
+
+
 US-12: Panel moderatora
 Jako moderator chcę mieć dostęp do dedykowanego panelu zarządzania, aby skutecznie nadzorować przebieg rozgrywek i zachowanie graczy.
 Kryteria akceptacji:
@@ -89,6 +110,8 @@ Kryteria akceptacji:
 - Panel wyświetla listę aktualnych zgłoszeń graczy.
 - Panel wyświetla listę aktywnych pokoi gry z dodatkowymi opcjami zarządzania.
 - Moderator ma wgląd w czat tekstowy wszystkich aktywnych pokoi.
+
+
 US-13: Rozpatrywanie zgłoszeń
 Jako moderator chcę przeglądać i rozpatrywać zgłoszenia graczy, aby reagować na problemy w grze.
 Kryteria akceptacji:
@@ -96,6 +119,8 @@ Kryteria akceptacji:
 - Kliknięcie zgłoszenia wyświetla jego treść oraz nazwę zgłoszonego gracza.
 - Panel udostępnia przyciski umożliwiające zastosowanie dostępnych kar.
 - Moderator ma możliwość odrzucenia zgłoszenia bez nakładania kary.
+
+
 US-14: Nakładanie blokad na graczy
 Jako moderator chcę mieć możliwość nakładania blokad na konta użytkowników, aby egzekwować przestrzeganie regulaminu.
 Kryteria akceptacji:
@@ -104,6 +129,8 @@ Kryteria akceptacji:
 - Po zatwierdzeniu status konta gracza zmienia się na „Zablokowany".
 - System zapisuje datę wygaśnięcia blokady oraz identyfikator moderatora nakładającego karę.
 - Jeśli gracz jest aktualnie zalogowany, zostaje natychmiast wylogowany z systemu.
+
+
 US-15: Informowanie gracza o aktywnej blokadzie
 Jako zablokowany gracz chcę wiedzieć, dlaczego nie mogę się zalogować i jak długo potrwa moja kara, aby mieć jasność co do swojego statusu w systemie.
 Kryteria akceptacji:
@@ -112,6 +139,8 @@ Kryteria akceptacji:
 - W przypadku blokady czasowej komunikat zawiera datę i godzinę jej wygaśnięcia; w przypadku blokady stałej — informację o permanentnym wykluczeniu.
 - System automatycznie przywraca możliwość logowania po upływie czasu blokady czasowej.
 - Komunikat jest wizualnie odróżniony od standardowego błędu „błędne hasło".
+
+
 US-16: Wyciszanie gracza na czacie
 Jako moderator chcę móc nakładać czasowe ograniczenia na wysyłanie wiadomości przez graczy, aby reagować na agresywne zachowania bez konieczności usuwania gracza z rozgrywki.
 Kryteria akceptacji:
@@ -121,6 +150,8 @@ Kryteria akceptacji:
 - Wyciszony gracz otrzymuje komunikat systemowy z informacją o czasie trwania i powodem wyciszenia.
 - Inni gracze nie widzą prób wysyłania wiadomości przez wyciszoną osobę.
 - Po upływie czasu wyciszenia uprawnienia do pisania są automatycznie przywracane, a gracz otrzymuje stosowny komunikat.
+
+
 US-17: Zamykanie pokoju gry
 Jako moderator chcę móc trwale zamknąć pokój rozgrywki, aby zakończyć sesję i usunąć ją z listy dostępnych pokoi.
 Kryteria akceptacji:
@@ -129,21 +160,27 @@ Kryteria akceptacji:
 - Po potwierdzeniu wszyscy gracze otrzymują komunikat o zamknięciu pokoju przez moderatora i zostają przekierowani do menu głównego.
 - Pokój zostaje usunięty z publicznej listy dostępnych pokoi.
 - Dane o zakończonej rozgrywce zostają zapisane w historii graczy przed usunięciem pokoju.
+
+
 US-18: Resetowanie rozgrywki w pokoju
-Jako moderator chcę móc zresetować bieżący stan pokoju, aby rozpocząć nową rundę z tymi samymi graczami bez konieczności tworzenia nowego pokoju.
+Jako moderator chcę móc zlecić reset bieżącego stanu pokoju przez klienta gry, aby zainicjować nową rundę z tymi samymi graczami bez konieczności tworzenia nowego pokoju.
 Kryteria akceptacji:
-- Moderator posiada opcję „Resetuj rundę" dostępną w trakcie lub po zakończeniu meczu.
+- Klient gry udostępnia opcję „Resetuj rundę" w panelu moderatora, widoczną w trakcie lub po zakończeniu meczu.
 - Opcja widoczna jest wyłącznie dla użytkownika z rolą moderatora danego pokoju.
-- Po resecie wszystkie wyniki bieżącej sesji zostają wyzerowane, a stan gry wraca do etapu lobby przygotowawczego.
-- Gracze pozostają w pokoju i otrzymują komunikat: „Moderator zresetował rozgrywkę".
+- Po potwierdzeniu klient przesyła żądanie resetu do serwera gry; serwer zeruje wyniki i przywraca stan lobby przygotowawczego.
+- Klient wyświetla wszystkim graczom w pokoju komunikat: „Moderator zresetował rozgrywkę".
+
+
 US-19: Wymuszanie zakończenia meczu
-Jako moderator chcę móc natychmiast zakończyć trwający mecz, aby rozliczyć wyniki w sytuacjach spornych lub technicznych.
+Jako moderator chcę móc zlecić natychmiastowe zakończenie trwającego meczu przez klienta gry, aby rozliczyć wyniki w sytuacjach spornych lub technicznych.
 Kryteria akceptacji:
-- Moderator może zakończyć mecz przed spełnieniem naturalnych warunków wygranej.
-- System wymaga potwierdzenia akcji przed jej wykonaniem.
-- Po wymuszonym zakończeniu system nalicza statystyki i punkty zdobyte do momentu przerwania.
-- Pokój przechodzi w stan „Zakończony", umożliwiając graczom przejrzenie wyników — gracze nie są przekierowywani do menu głównego.
-- Pokój przestaje być widoczny na liście aktywnych rozgrywek dla graczy spoza pokoju.
+- Klient gry udostępnia moderatorowi opcję wymuszenia zakończenia meczu przed spełnieniem naturalnych warunków wygranej.
+- Klient wymaga potwierdzenia akcji przed jej wysłaniem do serwera.
+- Po otrzymaniu potwierdzenia klient przesyła żądanie do serwera gry, który nalicza statystyki i punkty zdobyte do momentu przerwania.
+- Klient wyświetla ekran podsumowania z wynikami; gracze nie są automatycznie przekierowywani do menu głównego.
+- Klient przestaje wyświetlać pokój na liście aktywnych rozgrywek dla graczy spoza pokoju, zgodnie ze stanem zwróconym przez serwer.
+
+
 US-20: Raporty finansowe sklepu
 Jako Product Manager chcę mieć dostęp do modułu raportowania sprzedaży, aby monitorować przychody i popularność przedmiotów w celu optymalizacji strategii biznesowej.
 Kryteria akceptacji:
@@ -153,6 +190,8 @@ Kryteria akceptacji:
 - Po zastosowaniu filtra dane w raporcie są automatycznie przeliczane i aktualizowane.
 - Zestawienie prezentowane jest w formie tabeli z możliwością sortowania według nazwy przedmiotu lub wygenerowanego przychodu.
 - Raport rozróżnia przychód z cen bazowych od przychodu z przedmiotów sprzedanych w ramach promocji.
+
+
 US-21: Statystyki aktywności graczy
 Jako Product Manager chcę mieć wgląd w dane dotyczące aktywności graczy w czasie rzeczywistym oraz historycznie, aby analizować trendy popularności i efektywność wprowadzanych aktualizacji.
 Kryteria akceptacji:
@@ -161,6 +200,8 @@ Kryteria akceptacji:
 - Panel zawiera wykres liniowy obrazujący zmiany liczby graczy w ciągu ostatnich 24 godzin, z możliwością odczytu dokładnej wartości po najechaniu kursorem.
 - Product Manager może sprawdzić szczytową liczbę graczy online dla wybranego dnia.
 - Statystyki dzienne są archiwizowane, umożliwiając porównanie aktywności z poprzednimi dniami lub tygodniami.
+
+
 US-22: Codzienna nagroda za logowanie
 Jako Product Manager chcę zarządzać systemem bonusów za codzienne logowanie, aby zwiększać retencję graczy.
 Kryteria akceptacji:
@@ -170,6 +211,8 @@ Kryteria akceptacji:
 - Gracz po zalogowaniu otrzymuje powiadomienie z informacją o odebranej nagrodzie.
 - System uniemożliwia ponowne odebranie nagrody tego samego dnia przez tego samego użytkownika.
 - Product Manager może w dowolnym momencie zmienić wartość lub typ nagrody; zmiany wchodzą w życie od najbliższego cyklu dobowego.
+
+
 US-23: Ankiety po meczu
 Jako Product Manager chcę mieć możliwość publikowania krótkich pytań dla graczy po zakończeniu meczu, aby zbierać dane o ich odczuciach i preferencjach bez konieczności opuszczania aplikacji.
 Kryteria akceptacji:
@@ -178,6 +221,8 @@ Kryteria akceptacji:
 - Gracz ma możliwość pominięcia ankiety przyciskiem „Pomiń".
 - System rejestruje każdą udzieloną odpowiedź i przypisuje ją do identyfikatora danej ankiety w bazie danych.
 - Product Manager widzi w panelu zestawienie wyników ankiety z podziałem na poszczególne opcje odpowiedzi.
+
+
 US-24: Zarządzanie rolami użytkowników
 Jako administrator chcę mieć możliwość nadawania i odbierania ról użytkownikom, aby kontrolować poziom uprawnień w systemie.
 Kryteria akceptacji:
